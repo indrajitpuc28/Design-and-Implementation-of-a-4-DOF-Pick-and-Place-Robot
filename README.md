@@ -90,55 +90,11 @@ import pypandoc
 readme_text = """# 🤖 4-DOF Pick and Place Robotic Arm  
 **Low-Cost | Arduino-Based | Bluetooth Controlled**
 
-![My Robotic Arm](images/robotic_arm.jpg)
+AC@DESKTOP-O60DG0F MINGW32 /e/imagesrobotic_arm.jpg
+
 
 A functional, low-budget **4-DOF articulated robotic arm** designed for simple industrial operations. This README now includes an **image section** and a **JSON configuration example**.
 
 ---
 
-## 📌 Introduction  
-Modern robotics stems from the concept of *“robot”*—derived from the Czech word **“robota”** (forced labor). Today, robots automate repetitive, hazardous, and high-precision tasks.  
-This project provides a **low-cost robotic solution** ideal for SMEs, students, and researchers.
 
----
-
-{
-  "servo_limits": {
-    "base": { "min": 0, "max": 180 },
-    "shoulder": { "min": 20, "max": 160 },
-    "elbow": { "min": 10, "max": 170 },
-    "wrist": { "min": 0, "max": 180 },
-    "gripper": { "open": 60, "close": 150 }
-  },
-  "bluetooth": {
-    "module": "HC-05",
-    "baud_rate": 9600
-  },
-  "app_commands": {
-    "up": "U",
-    "down": "D",
-    "left": "L",
-    "right": "R",
-    "grip_toggle": "G"
-  }
-}
-{
-  "servo_limits": {
-    "base": { "min": 0, "max": 180 },
-    "shoulder": { "min": 20, "max": 160 },
-    "elbow": { "min": 10, "max": 170 },
-    "wrist": { "min": 0, "max": 180 },
-    "gripper": { "open": 60, "close": 150 }
-  },
-  "bluetooth": {
-    "module": "HC-05",
-    "baud_rate": 9600
-  },
-  "app_commands": {
-    "up": "U",
-    "down": "D",
-    "left": "L",
-    "right": "R",
-    "grip_toggle": "G"
-  }
-}
