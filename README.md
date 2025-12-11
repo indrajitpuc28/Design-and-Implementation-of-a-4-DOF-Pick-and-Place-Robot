@@ -1,6 +1,4 @@
-import pypandoc
-
-readme_text = """# 🤖 4-DOF Pick and Place Robotic Arm  
+🤖 4-DOF Pick and Place Robotic Arm  
 **Low-Cost | Arduino-Based | Bluetooth Controlled**
 
 A functional, low-budget **4-DOF articulated robotic arm** designed for simple industrial operations such as gripping, lifting, placing, and releasing objects. Built using easily available components, this system aims to make basic automation accessible for small-scale industries and educational purposes.
@@ -87,4 +85,45 @@ output_path = "/mnt/data/README.md"
 pypandoc.convert_text(readme_text, 'md', format='md', outputfile=output_path, extra_args=['--standalone'])
 
 output_path
+import pypandoc
+
+readme_text = """# 🤖 4-DOF Pick and Place Robotic Arm  
+**Low-Cost | Arduino-Based | Bluetooth Controlled**
+
+![Robot Image](robot_image_placeholder.png)
+
+A functional, low-budget **4-DOF articulated robotic arm** designed for simple industrial operations. This README now includes an **image section** and a **JSON configuration example**.
+
+---
+
+## 📌 Introduction  
+Modern robotics stems from the concept of *“robot”*—derived from the Czech word **“robota”** (forced labor). Today, robots automate repetitive, hazardous, and high-precision tasks.  
+This project provides a **low-cost robotic solution** ideal for SMEs, students, and researchers.
+
+---
+
+## 🧰 JSON Configuration Example  
+You can customize servo limits or app commands using a JSON config like this:
+
+```json
+{
+  "servo_limits": {
+    "base": { "min": 0, "max": 180 },
+    "shoulder": { "min": 20, "max": 160 },
+    "elbow": { "min": 10, "max": 170 },
+    "wrist": { "min": 0, "max": 180 },
+    "gripper": { "open": 60, "close": 150 }
+  },
+  "bluetooth": {
+    "module": "HC-05",
+    "baud_rate": 9600
+  },
+  "app_commands": {
+    "up": "U",
+    "down": "D",
+    "left": "L",
+    "right": "R",
+    "grip_toggle": "G"
+  }
+}
 
